@@ -1,0 +1,159 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdint.h>
+
+void task1() {
+    int a, b, c, sum, reverse;
+    unsigned number;
+    printf("Enter a number: ");
+    scanf("%u", &number);
+
+    if (number >= 100 && number <= 999) {
+        a = number % 10;
+        b = (number / 10) % 10;
+        c = (number / 100);
+
+        printf(" a = %d\n", a);
+        printf(" b = %d\n", b);
+        printf(" c = %d\n", c);
+
+        sum = a + b + c;
+        reverse = a * 100 + 10 * b + c;
+
+        printf(" sum = %d\n", sum);
+        printf(" reverse = %d\n", reverse);
+    }
+}
+
+void task2() {
+    unsigned number;
+    int a, b, c;
+    printf("Enter a number: ");
+    scanf("%u", &number);
+
+    if (number >= 100 && number <= 999) {
+        a = number % 10;
+        b = (number / 10) % 10;
+        c = (number / 100);
+
+        if (a != b && b != c && c != a) {
+            printf("%d%d%d\n", a, b, c);
+            printf("%d%d%d\n", a, c, b);
+            printf("%d%d%d\n", b, a, c);
+            printf("%d%d%d\n", b, c, a);
+            printf("%d%d%d\n", c, a, b);
+            printf("%d%d%d\n", c, b, a);
+        }
+    }
+}
+
+void task3() {
+    long long a, b, c, product;
+    printf("Enter three numbers separated by coma: ");
+    scanf("%lld %lld %lld", &a, &b, &c);
+    product = a * b * c;
+    printf("Product = %lld\n", product);
+}
+
+uint16_t mult(uint8_t x, uint8_t y) {
+    return (uint16_t)x * y;
+}
+
+void task4() {
+    uint8_t x, y;
+    uint16_t z;
+
+    printf("Enter x and y: ");
+    scanf("%hhu %hhu", &x, &y);
+
+    z = mult(x, y);
+    printf("Result: %u\n", z);
+}
+
+void task5() {
+    int a, b;
+    printf("Enter a two numbers: ");
+    scanf("%d %d", &a, &b);
+    if (a > b) {
+        printf("%d is bigger than %d\n", a, b);
+
+    } else {
+        printf("%d is bigger than %d\n", b, a);
+
+
+    }
+}
+
+
+void task6() {
+    float a, b, c;
+    printf("Enter a, b, c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    // Визначення чисел з найбільшими абсолютними значеннями
+    float max_val = a;
+
+    if (fabs(b) > fabs(max_val)) {
+        max_val = b;
+    }
+
+    if (fabs(c) > fabs(max_val)) {
+        max_val = c;
+    }
+
+    // Виведення результату
+    printf("The bigger: %f\n", max_val);
+}
+void task7_a() {
+    float a, b, c, D, d, x1 , x2;
+    printf("Enter a, b, c: ");
+    scanf("%f %f %f", &a, &b, &c);
+    printf("%fx^2 + %fx + %f\n", a, b, c);
+    D = b * b - 4 * a * c;
+    if (D > 0) { printf("The equation has 2 roots \n " ); }
+     else if (D == 0) { printf("The equation has 1 root \n "); }
+    else if (D < 0) { printf("The equation has 0 root \n"); }
+
+    d = sqrt(D);
+    x1 = (-b - d) / (2 * a);
+    x2 = (-b + d) / (2 * a);
+    printf("x1 =  %f, x2 = %f", x1, x2);
+
+
+}
+
+void task7_b() {
+    float a, b, c, D, d, t1 , t2, x1, x2, x3, x4;
+    printf("Enter a, b, c: ");
+    scanf("%f %f %f", &a, &b, &c);
+    printf("%fx^4 + %fx^2 + %f\n", a, b, c);
+    printf("%ft^2 + %ft + %f\n", a, b, c);
+    D = b * b - 4 * a * c;
+    if (D > 0) { printf("The equation has 2 roots \n " ); }
+    else if (D == 0) { printf("The equation has 1 root \n "); }
+    else if (D < 0) { printf("The equation has 0 root \n"); }
+
+    d = sqrt(D);
+    t1= (-b - d) / (2 * a);
+    t2 = (-b + d) / (2 * a);
+
+    x1 =  sqrt(t1);
+    x2 = - sqrt(t1);
+    x3 =  sqrt(t2);
+    x4 =  - sqrt(t2);
+    printf("x1 =  %f, x2 =  %f, x3 =  %f, x4 =  %f", x1, x2, x3, x4);
+}
+
+int main() {
+    /* task1();
+     task2();
+     task3();
+     task4();
+     task5();
+      task6();
+    task7_a();*/
+    task7_b ();
+
+
+    return 0;
+}
