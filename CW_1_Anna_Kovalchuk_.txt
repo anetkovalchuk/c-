@@ -1,0 +1,405 @@
+// 1.1
+#include <stdio.h>
+
+int main() {
+
+    int result1 = 2 + 31;
+    int result2 = 45 * 54 - 11;
+    int result3 = 15 / 4;
+    double result4 = 15.0 / 4;
+    int result5 = 67 % 5;
+    double result6 = (2 * 45.1 + 3.2) / 2;
+
+    
+    printf("2 + 31 = %d\n", result1);
+    printf("45 * 54 - 11 = %d\n", result2);
+    printf("15 / 4 = %d\n", result3);
+    printf("15.0 / 4 = %.2f\n", result4);
+    printf("67 %% 5 = %d\n", result5);
+    printf("(2 * 45.1 + 3.2) / 2 = %.2f\n", result6);
+
+    return 0;
+}
+
+
+
+
+
+// 1.2
+#include  <stdio.h>
+#include  <math.h>
+
+int main() {
+
+    float one_num = pow(10,-4);
+    double two_num = 24.33E5;
+    long double three_num = M_PI;
+    long double four_num = M_E;
+    double five_num = sqrt(5.0);
+    double six_num = log(100);
+
+
+    printf(" 10^-4: %.2f\n", one_num);
+    printf(" 24.33E5: %.2f\n", two_num);
+    printf(" Pi: %.2f\n", three_num);
+    printf(" E: %.2f\n", four_num);
+    printf(" Square root: %.2f\n", five_num);
+    printf(" log: %.2f\n", six_num);
+
+    return 0;
+
+}
+
+
+
+
+// 1.3
+#include  <stdio.h>
+#include  <stdlib.h>
+
+int main() {
+
+    int a;
+    printf("Enter a number: ");
+    scanf(" %d", &a);
+    printf("Result1: %d\n", - a - a - a);
+    printf("Result2: %d\n", a * abs(a) * a);
+    printf("Result1: %d\n", - a - a - a);
+    
+    return 0;
+
+}
+
+
+
+// 1.4
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    double y;
+    y = 6.673 * pow(10,-11);
+    double m1, m2, r, F;
+
+    printf(" Enter a m1: ");
+    scanf("%lf", &m1);
+    printf("Enter a m2: ");
+    scanf("%lf", &m2);
+    printf("Enter a r : ");
+    scanf("%lf", &r);
+
+
+    F = y * (m1 * m2) / pow(r, 2);
+
+    printf("F=%.3e Н\n", F);
+
+    return 0;
+
+}
+
+
+
+// 1.5 a)
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    float a;
+    printf("Enter a number: ");
+    scanf("%f", &a);
+
+
+    float b;
+    b = a * a;
+
+    float c;
+    c = b * b;
+
+    printf("The result is: %f\n", c);
+
+    return 0;
+
+}
+
+
+// б)
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    float a;
+    printf("Enter a number: ");
+    scanf("%f", &a);
+
+
+    float b;
+    b = a * a;
+
+    float c;
+    c = b * b;
+
+    float d;
+    d = c * b;
+
+    printf("The result is: %f\n", d);
+
+    return 0;
+
+}
+
+
+
+// в)
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    float a;
+    printf("Enter a number: ");
+    scanf("%f", &a);
+
+
+    float b;
+    b = a * a;
+
+    float c;
+    c = b * a ;
+
+    float d;
+    d = c * c;
+
+    float e;
+    e = d * c;
+
+    printf("The result is: %f\n", e);
+
+    return 0;
+
+}
+
+
+
+// г)
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    float a;
+    printf("Enter a number: ");
+    scanf("%f", &a);
+
+
+    float b;
+    b = a * a;
+
+    float c;
+    c = b * a ;
+
+    double d;
+    d = c * c;
+
+    double e;
+    e = d * d;
+
+    double f;
+    f = e * c;
+
+    printf("The result is: %f\n", f);
+
+    return 0;
+
+}
+
+
+
+// д)
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    float a;
+    printf("Enter a number: ");
+    scanf("%f", &a);
+
+
+    float b;
+    b = a * a;
+
+    float c;
+    c = b * b ;
+
+    double d;
+    d = c * c;
+
+    double e;
+    e = d * d;
+
+    double f;
+    f = e * d;
+
+    double g;
+    g = f * c;
+    printf("The result is: %f\n", g);
+
+    return 0;
+
+}
+
+
+// e)
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    float a;
+    printf("Enter a number: ");
+    scanf("%f", &a);
+
+
+    float b;
+    b = a * a;
+
+    float c;
+    c = b * b ;
+
+    double d;
+    d = c * c;
+
+    double e;
+    e = d * d;
+
+    double f;
+    f = e * e;
+
+    double g;
+    g = f * f;
+    printf("The result is: %f\n", g);
+
+    return 0;
+
+}
+
+
+
+// 1.6
+#include <math.h>
+#include  <stdio.h>
+
+
+int main() {
+
+    float C;
+    printf("Enter the number of degrees Celsius: ");
+    scanf("%f", &C);
+
+    float F = (C*9)/5 + 32;
+    printf("The value of F is: %.2f", F);
+
+    return 0;
+
+}
+
+
+// 1.7
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x;
+
+    printf("Enter the number: ");
+    scanf("%lf", &x);
+
+    // modf- озділяє число на цілу та дробову частини
+    // int_part - ціла частина, frac_part - дробова
+    double int_part;
+    double frac_part = modf(x, &int_part);
+
+    // ceil - повертає найменше ціле число
+    double next_up = ceil(x);
+
+    // floor найбільше ціле число
+    double prev_down = floor(x);
+
+
+    double rounded = round(x);
+
+
+    printf("Entered number : %.2lf\n", x);
+    printf("Whole part: %.0lf\n", int_part);
+    printf("fractoinal part: %.2lf\n", frac_part);
+    printf("The smallest integer: %.0lf\n", next_up);
+    printf("The largest integer: %.0lf\n", prev_down);
+    printf("Rounded value: %.0lf\n", rounded);
+
+    return 0;
+}
+
+// 1.8
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    float a, b;
+    printf("Enter two numbers: ");
+    scanf("%f%f", &a, &b);
+
+    float diff;
+    diff = a - b;
+
+    float product;
+    product = a * b;
+
+    printf("The difference is: %.2f\n", diff);
+    printf("The product is: %.2f\n", product);
+
+
+
+
+    return 0;
+}
+
+// 1.9		
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    float a, b;
+    printf("Enter two numbers: ");
+    scanf("%f%f", &a, &b);
+
+    float average_a;
+    average_a = (a + b) / 2;
+
+    float average_g;
+    average_g = (2 * a * b) / (a + b);
+
+    printf("Average_a of two numbers: %.2e\n", average_a);
+    printf("Average_g of two numbers: %.2e\n", average_g);
+
+    printf("Average_a of two numbers: %.2f\n", average_a);
+    printf("Average_g of two numbers: %.2f\n", average_g);
+
+
+
+    return 0;
+}
+
+
