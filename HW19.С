@@ -1,0 +1,44 @@
+#include <iostream>
+#include <queue>
+#include <string>
+
+struct Auto {
+    std::string name;
+    std::string model;
+    std::string number;
+    std::string ownerID;
+};
+
+void printAuto(const Auto& car) {
+    std::cout << "Name: " << car.name 
+              << ", Model: " << car.model 
+              << ", Number: " << car.number 
+              << ", Owner ID: " << car.ownerID << std::endl;
+}
+
+int main() {
+    std::queue<Auto> carWashQueue;
+
+    carWashQueue.push({"Toyota", "Corolla", "AA1234BB", "ID001"});
+    carWashQueue.push({"Honda", "Civic", "AB5678CD", "ID002"});
+    carWashQueue.push({"Ford", "Focus", "AC9876EF", "ID003"});
+
+    std::cout << "Queue state before washing:\n";
+    std::queue<Auto> tempQueue = carWashQueue;
+    while (!tempQueue.empty()) {
+        printAuto(tempQueue.front());
+        tempQueue.pop();
+    }
+
+    std::cout << "\nCar washing starts:\n";
+    while (!carWashQueue.empty()) {
+        Auto currentCar = carWashQueue.front();
+        std::cout << "Washing car: ";
+        printAuto(currentCar);
+        carWashQueue.pop();
+    }
+
+    std::cout << "\nQueue is empty, all cars are washed!\n";
+
+    return 0;
+}
